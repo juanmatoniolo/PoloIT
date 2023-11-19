@@ -1,4 +1,7 @@
+// import { subirImagen } from "../../public/guardar";
 const { Router } = require("express");
+
+
 const router = Router();
 
 //defino todas las funciones en noteCrontrolers

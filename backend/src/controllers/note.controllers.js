@@ -1,6 +1,8 @@
 const noteCtls = {};
 const Note = require("../modells/notes");
 
+
+
 noteCtls.getNotes = async (req, res) => {
 	const notes = await Note.find();
 	res.json(notes);
