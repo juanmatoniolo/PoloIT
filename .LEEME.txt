@@ -1,0 +1,15 @@
+SE ADJUNTA EL TP HASTA DONDE PUDIMOS HACER. SE LE SEGUIRAN HACIENDO MODIFICACIONES PARA SU MUESTRA EL DIA 22. 
+
+ EL MISMO CUENTA CON: 
+CARPETA DEL PROYECTO
+|--> BACK ---> al correrlo se conecta en localhost:4000 
+|--> FRONT ---> le falta ultimar detalles, al correrlo se conecta en el localhost:3000
+|--> 3 img donde se muestran un poco como funciona el proyecto
+|--> link de repo de github: https://github.com/juanmatoniolo/PoloIT.git
+
+
+
+NOTAS: Se nos presentaron inconvenientes a lo largo del proyecto sumado a algunas limitaciones que logramos superar con un poco de esfuerzo y dedicación.
+ Desde la parte del back costó mucho poder montarlo y por las plazos no lo pudimos subir a algun host para dejarlo corriendo. El mismo cuenta con un crud al que le falta optimizar el tema de cargas de img.	
+ Desde el front nos consto al principio agarrarle la mano ya que apenas conocíamos la tecnología pero nos las fuimos arreglando para poder entregar 'algo', ya que como nos dijo Gera, nuestro mentor, siempre es mejor entregar algo a no entregar nada. Siguiendo sus palabra .....NUESTRO PROYECTO.... :
+
