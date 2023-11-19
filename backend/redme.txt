@@ -1,6 +1,47 @@
-npm init - y
-npm i express mongoose cors dotenv
-npm i nodemon -d 
+DEPENDENCIAS: 
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.1",
+    "nodemon": "^3.0.1"
 
-/////******/// Para abrir el servidor ////********////
-node src/index.js
+────────────────────────────
+|   FUNCIONAMIENTO:         |
+─────────────────────────────
+
+BACKEND
+|->NODE_MODULES
+|->SRC
+|-> APP.JS      //conectamos al servidor 
+|-> DATABASE.JS //cargamos la conectividad de mongo y luego la ejecutamos en app.js
+|-> INDEX.JS
+|-> .ENV        //Para cargar las variables de entorno
+
+
+--------------------------------------------------------------------------------------
+--------------------    CONTENIDO DE LA CARPETA SRC ---------------------------------
+--------------------------------------------------------------------------------------
+
+SRC
+|
+|-> CONTROLLERS
+|       /-> NOTE.CONTROLLERS.js     //se crea el crud 
+|       /-> USER.CONTROLLERS.JS
+|
+|-> MODELS //se crea el Schema y Model para luego usarlo en controllers
+|       /-> NOTES.JS 
+|       /-> USERS.JS       
+|
+|-> ROUTES
+|       /->NOTES.JS         //definimos las rutas del servidor
+|       /->USER.JS
+|
+
+
+
+
+COMANDO PARA EJECUATAR EL SERVIDOR: 
+npm run dev
+
+
+NOTAS: Trate de documentar todo lo maximo posible. Este fue mi primer backend y fue un poco frustrante al principio hasta que pude agarrarle la onda. Se adjuntaron imagenes de como esta la base de datos en mongo. 
