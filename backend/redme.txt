@@ -1,0 +1,6 @@
+npm init - y
+npm i express mongoose cors dotenv
+npm i nodemon -d 
+
+/////******/// Para abrir el servidor ////********////
+node src/index.js
