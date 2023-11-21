@@ -4,7 +4,7 @@ require("dotenv").config(); // Asegúrate de tener esta línea si estás usando 
 mongoose.connect(
 	process.env.MONGO_URI
 		? process.env.MONGO_URI
-		: "mongodb://localhost:27017/test1",
+		: "mongodb://localhost:27017/test",
 	{
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
