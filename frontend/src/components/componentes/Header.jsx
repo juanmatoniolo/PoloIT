@@ -66,6 +66,8 @@ function Header() {
 			<header className="headerContenedor">
 				<img src={banner} className="imgHeader " alt="" />
 			</header>
+
+
 		</div>
 	);
 }

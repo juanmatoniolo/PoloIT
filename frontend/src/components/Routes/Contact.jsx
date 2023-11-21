@@ -1,10 +1,14 @@
 import React from "react";
 import FormularioDatos from "../SumarEmpresa";
 import Footer from "../componentes/Footer";
+import "../../index.css";
+
 function Contact() {
 	return (
 		<>
-			<FormularioDatos />
+			<div className="bodyPage">
+				<FormularioDatos />
+			</div>
 			<Footer />
 		</>
 	);
