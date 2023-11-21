@@ -102,4 +102,12 @@ a:hover {
     .navContainerSub {
         width: 110%;
     }
+
+    .imgHeader{
+        width: 100%;
+        height: 50vh;
+    }
+    .headerContenedor{
+        height: 25em;
+    }
 }

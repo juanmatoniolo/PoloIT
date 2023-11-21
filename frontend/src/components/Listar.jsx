@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import axios from "axios";
-import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
-import Row from "react-bootstrap/Row";
-/***************************************************************************/
+import imgVideo from "./assets/images/imgVideo.jpg";
+import ImagenesExport from "./assets/images/Imagenes";
+import CardTitle from "react-bootstrap/esm/CardTitle";
+import CardBody from "react-bootstrap/esm/CardBody";
+import CardText from "react-bootstrap/esm/CardText";
+import "../index.css";
+import Tooltips from "./Tooltip";
 export default class Listar extends Component {
 	state = {
 		users: [],
 	};
-
-	//Creamos un metodo para capturar
 
 	async componentDidMount() {
 		try {
@@ -26,106 +26,115 @@ export default class Listar extends Component {
 	render() {
 		return (
 			<>
-				<div className="Container-fluid d-flex gap-3 justify-content-around" style={{'margin-top':"2em", 'margin-bottom':'2em'}}>
+				<div
+					className="container contenedorCards"
+					style={{ marginTop: "2em", marginBottom: "2em" }}
+				>
 					{this.state.users.map((user) => (
 						<Card
 							key={user.id}
-							style={{ width: "18rem" }}
-							className={user._id}
 							id={user._id}
+							className="col-11 col-sm-10 col-md-5 contenedorCard"
 						>
-							<Card.Img
-								variant="top"
-								src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogodownload.org%2Fwp-content%2Fuploads%2F2013%2F12%2Fapple-logo-1-1.png&f=1&nofb=1&ipt=77699186de5a99d4672e949504310dc5d5e6c013dd3ed01a5cef9d23d0d1302d&ipo=images"
-								className="imgCards"
-								style={{
-									width: "4em",
-									display:"block",
-									marginLeft:"auto",
-									marginRight:"auto"
-									
-								}}
-							/>
-							<Card.Body>
-								<Card.Title>{user.nombre}</Card.Title>
-								<Card.Text>{user.direccion}</Card.Text>
-								<Button variant="primary">{user.email}</Button>
-							</Card.Body>
+							<CardTitle className="contenedorImagen">
+								<img
+									src={ImagenesExport[user.nombre]}
+									alt=""
+									style={{
+										width: "8em",
+										display: "block",
+										marginLeft: "auto",
+										marginRight: "auto",
+									}}
+								/>
+							</CardTitle>
+							<CardTitle>
+								<img
+									src={imgVideo}
+									style={{
+										display: "block",
+										marginLeft: "auto",
+										marginRight: "auto",
+									}}
+									alt=""
+								/>
+							</CardTitle>
+							<CardBody>
+								<CardText>
+									Lorem ipsum dolor sit, amet consectetur
+									adipisicing elit. Suscipit nam reprehenderit
+									eum harum necessitatibus voluptatum nesciunt
+									corporis modi officia doloribus facilis
+									libero amet non veritatis blanditiis
+									voluptate voluptas, deleniti placeat.
+								</CardText>
+								<div className="contenedorRedes">
+									<div className="redesSociaes">
+										{user.link_ig && (
+											<a
+												href={user.link_ig}
+												rel="noreferrer"
+												target="_blank"
+												className="IconosContactos"
+											>
+												<img
+													src={ImagenesExport.ig}
+													className="IconosContactos"
+													alt=""
+												/>
+											</a>
+										)}
+
+										{user.link_tw && (
+											<a
+												href={user.link_tw}
+												rel="noreferrer"
+												target="_blank"
+												className="IconosContactos"
+											>
+												<img
+													src={ImagenesExport.tw}
+													className="IconosContactos"
+													alt=""
+												/>
+											</a>
+										)}
+
+										{user.email && (
+											<Tooltips
+												title={user.email}
+											></Tooltips>
+										)}
+
+										{user.link_linkedin && (
+											<a
+												href={user.link_linkedin}
+												rel="noreferrer"
+												target="_blank"
+												className="IconosContactos"
+											>
+												<img
+													src={ImagenesExport.link}
+													className="IconosContactos"
+													alt=""
+												/>
+											</a>
+										)}
+									</div>
+									<a
+										className="botonContactar"
+										href={user.web}
+										rel="noreferrer"
+										target="_blank"
+									>
+										<button className="btn btn-primary botonContactar">
+											Visitar web
+										</button>
+									</a>
+								</div>
+							</CardBody>
 						</Card>
 					))}
-				</div>
-				{/** ---------------------------------------------------------------- **/}
-				<div className="formularioEmpresas">
-					<h3>Cargar nueva empresa: </h3>
-					<Form className="col-sm-11 col-md-10 col-10 container-fluid">
-						<Row className="mb-3">
-							<Form.Group as={Col} controlId="formGridEmail">
-								<Form.Label>Nombre</Form.Label>
-								<Form.Control
-									type="text"
-									placeholder="Enter email"
-									id="formNombre"
-								/>
-							</Form.Group>
-
-							<Form.Group as={Col} controlId="formGridPassword">
-								<Form.Label>Localidad</Form.Label>
-								<Form.Control
-									type="text"
-									placeholder="ej.: Rosario, Santa Fe"
-									id="formLocalidad"
-								/>
-							</Form.Group>
-						</Row>
-
-						<Form.Group
-							className="mb-3"
-							controlId="formGridAddress1"
-						>
-							<Form.Label>Email</Form.Label>
-							<Form.Control placeholder="example@email.com"id="formEmail" />
-						</Form.Group>
-
-						<Form.Group
-							className="mb-3"
-							controlId="formGridAddress2"
-						>
-							<Form.Label>Descripcion</Form.Label>
-							<Form.Control placeholder="Breve descripcion" id="formDescripcion" />
-						</Form.Group>
-
-						<Row className="mb-3">
-							<Form.Group className="d-grid  " as={Col} controlId="formGridCity">
-								<Form.Label>Redes sociales</Form.Label>
-								<Form.Control placeholder="Pag. Web Oficail" className="m-1 col-sm-8 col-4" id="formPag" />
-								<Form.Control placeholder="Instagram"  className="m-1 col-sm-8 col-4" id="formIg"/>
-								<Form.Control placeholder="Linkeding" className="m-1 col-sm-8 col-4" id="formLinkeding" />
-								<Form.Control placeholder="Twitter" className="m-1 col-sm-8 col-4" id="formTwitter"/>
-
-							</Form.Group>
-
-							<Form.Group as={Col} controlId="formGridState">
-								<Form.Label>State</Form.Label>
-								<Form.Select defaultValue="Choose...">
-									<option>Choose...</option>
-									<option>...</option>
-								</Form.Select>
-							</Form.Group>
-
-							<Form.Group as={Col} controlId="formGridZip">
-								<Form.Label>Zip</Form.Label>
-								<Form.Control />
-							</Form.Group>
-						</Row>
-
-						<Form.Group className="mb-3" id="formGridCheckbox">
-							<Form.Check type="checkbox" label="Check me out" />
-						</Form.Group>
-
-						<Button variant="primary" type="submit">
-							Submit
-						</Button>
-					</Form>
 				</div>
 			</>
 		);

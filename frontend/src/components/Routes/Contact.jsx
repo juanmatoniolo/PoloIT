@@ -1,9 +1,13 @@
 import React from "react";
-import Header from "../componentes/Header";
-function Contact () {
-    return(
-        <h3>Contacts! </h3>
-    )
+import FormularioDatos from "../SumarEmpresa";
+import Footer from "../componentes/Footer";
+function Contact() {
+	return (
+		<>
+			<FormularioDatos />
+			<Footer />
+		</>
+	);
 }
 
-export default Contact
+export default Contact;

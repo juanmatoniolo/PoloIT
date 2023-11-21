@@ -63,7 +63,7 @@ function Header() {
 				</Container>
 			</Navbar>
 
-			<header className="header">
+			<header className="headerContenedor">
 				<img src={banner} className="imgHeader " alt="" />
 			</header>
 		</div>

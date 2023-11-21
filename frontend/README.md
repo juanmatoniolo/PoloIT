@@ -28,6 +28,15 @@ TECNOLOGIAS UTILIZADAS A LOS LARGO Y ANCHO DEL PROYECTO:
 FRONTEND
 ├── NODE_MODULES
 ├── PUBLIC  
+|     ├─>asesset
+|            ├─>imagenes
+|                  ├─"2C5W"
+|                  ├─ "Acriter"
+|                  ├─"activia"
+|                  ├─ "Agos"
+|                  ├─ "accionpoint"
+|                  ├─
+|                  ├─
 ├── SRC
 
 

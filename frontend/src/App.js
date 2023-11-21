@@ -7,7 +7,6 @@ import Home from "./components/Routes/Home";
 import Contact from "./components/Routes/Contact";
 /********************   COMPONNETES     ********************* */
 
-import CreateCard from "./components/CreateCard";
 import Listar from "./components/Listar";
 
 /**************************************************************/
@@ -19,7 +18,6 @@ const App = () => {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/about" element={<About />} />
-					<Route path="/create" element={<CreateCard />} />
 					<Route path="/listar" element={<Listar />} />
 					<Route path="/contact" element={<Contact />} />
 				</Routes>
